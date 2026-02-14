@@ -41,7 +41,7 @@ class ServidorController extends Controller
                     'Configuración compleja para sitios grandes',
                 ],
                 'casos_uso' => 'Ideal para sitios convencionales, blogs, pequeños y medianos proyectos. Perfecto cuando necesitas máxima compatibilidad.',
-                'imagen' => 'https://share.google/IpK1TGXv3GY8kGeIO',
+                'imagen' => '/images/apache.jpg',
                 'video' => 'https://www.youtube.com/embed/nW-yJVl9YDc',
             ],
             'nginx' => [
