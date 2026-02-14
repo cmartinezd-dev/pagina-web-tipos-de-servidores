@@ -78,7 +78,7 @@ class ServidorController extends Controller
                     'Requiere reverse proxy para PHP dinámico',
                 ],
                 'casos_uso' => 'Perfecto para aplicaciones de alto tráfico, APIs, microservicios, startups tech, y cuando el rendimiento es crítico.',
-                'imagen' => '/images/NGINX.png',
+                'imagen' => '/images/NGINX.jpg',
                 'video' => 'https://www.youtube.com/embed/1CttrXCPPtE',
             ],
             'iis' => [
@@ -190,7 +190,7 @@ class ServidorController extends Controller
                     'Clustering manual necesario',
                 ],
                 'casos_uso' => 'APIs modernas, aplicaciones en tiempo real, startups, SPA backends, microservicios, chat en vivo, aplicaciones colaborativas.',
-                'imagen' => 'https://via.placeholder.com/600x400?text=Node.js',
+                'imagen' => '/images/node.jpg',
                 'video' => 'https://www.youtube.com/embed/TlB_eWDSMt4',
             ],
             'tomcat' => [
@@ -228,7 +228,7 @@ class ServidorController extends Controller
                     'Overhead de JVM',
                 ],
                 'casos_uso' => 'Aplicaciones Java empresariales, sistemas legacy, cuando se requiere especificaciones Java estándar.',
-                'imagen' => 'https://via.placeholder.com/600x400?text=Apache+Tomcat',
+                'imagen' => '/images/tomcat.jpg',
                 'video' => 'https://www.youtube.com/embed/sRJsn4xKvvE',
             ],
             'gunicorn' => [
@@ -265,7 +265,7 @@ class ServidorController extends Controller
                     'Requiere Python instalado',
                 ],
                 'casos_uso' => 'Aplicaciones Python, Flask, Django, startups, proyectos modernos, microservicios Python.',
-                'imagen' => 'https://via.placeholder.com/600x400?text=Gunicorn',
+                'imagen' => '/images/cuinocorn.jpg',
                 'video' => 'https://www.youtube.com/embed/s1FpDekm1Dw',
             ],
             'kestrel' => [
@@ -302,7 +302,7 @@ class ServidorController extends Controller
                     'Menos stackoverflowers',
                 ],
                 'casos_uso' => 'APIs modernas, microservicios .NET, aplicaciones empresariales, cuando necesitas rendimiento y multiplataforma.',
-                'imagen' => 'https://via.placeholder.com/600x400?text=Kestrel+.NET',
+                'imagen' => '/images/kestrel.jpg',
                 'video' => 'https://www.youtube.com/embed/w-g5W9l73oU',
             ],
         ];
