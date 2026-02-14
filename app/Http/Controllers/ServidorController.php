@@ -78,7 +78,7 @@ class ServidorController extends Controller
                     'Requiere reverse proxy para PHP dinámico',
                 ],
                 'casos_uso' => 'Perfecto para aplicaciones de alto tráfico, APIs, microservicios, startups tech, y cuando el rendimiento es crítico.',
-                'imagen' => 'https://via.placeholder.com/600x400?text=Nginx',
+                'imagen' => '/images/NGINX.png',
                 'video' => 'https://www.youtube.com/embed/1CttrXCPPtE',
             ],
             'iis' => [
@@ -116,7 +116,7 @@ class ServidorController extends Controller
                     'Curva de aprendizaje empinada',
                 ],
                 'casos_uso' => 'Empresas con infraestructura Microsoft, aplicaciones .NET, entornos corporativos con Active Directory.',
-                'imagen' => 'https://via.placeholder.com/600x400?text=Microsoft+IIS',
+                'imagen' => '/images/microsof iis.jpg',
                 'video' => 'https://www.youtube.com/embed/dDmYkGhWXk8',
             ],
             'litespeed' => [
@@ -152,7 +152,7 @@ class ServidorController extends Controller
                     'Costos de licencia para empresas',
                 ],
                 'casos_uso' => 'Hosting compartido, sitios de alto tráfico, WooCommerce, WordPress optimizado, cuando el costo de recursos es crítico.',
-                'imagen' => 'https://via.placeholder.com/600x400?text=LiteSpeed',
+                'imagen' => '/images/litespeed.jpg',
                 'video' => 'https://www.youtube.com/embed/Q-fYmKxzAqo',
             ],
             'nodejs' => [
