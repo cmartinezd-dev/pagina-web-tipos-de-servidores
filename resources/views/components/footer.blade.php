@@ -27,10 +27,10 @@
             <div>
                 <h3 class="text-xl font-bold mb-4">Información</h3>
                 <p class="text-gray-400 mb-2">
-                    <strong>Desarrollado por:</strong> Tu Nombre
+                    <strong>Desarrollado por:</strong> CARLOS MARTINEZ
                 </p>
                 <p class="text-gray-400">
-                    <strong>Email:</strong> tu-email@ejemplo.com
+                    <strong>Email:</strong> cmartinezd@miumg.edu.gt
                 </p>
             </div>
         </div>
@@ -42,7 +42,7 @@
                 &copy; 2026 ServidoresWeb. Todos los derechos reservados.
             </p>
             <p class="text-gray-400 text-sm mt-4 md:mt-0">
-                <strong>Desarrollado por: Tu Nombre</strong> 📚
+                <strong>Desarrollado por:CARLOS MARTINEZ</strong> 📚
             </p>
         </div>
     </div>
