@@ -1,127 +1,143 @@
 @extends('layout')
 
-@section('title', 'Dashboard')
+@section('title', 'Carátula - Tarea Académica')
 
 @section('content')
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <!-- Título de bienvenida -->
-    <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg shadow-lg p-8 mb-8 text-white">
-        <h1 class="text-4xl font-bold mb-2">¡Bienvenido, {{ $user->name }}! 👋</h1>
-        <p class="text-lg opacity-90">
-            Has iniciado sesión correctamente en ServidoresWeb
-        </p>
-    </div>
-
-    <!-- Información del usuario -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-        <!-- Tarjeta de perfil -->
-        <div class="bg-white dark:bg-slate-800 rounded-lg shadow-md p-6">
-            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Información de tu Cuenta</h2>
+<div class="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 py-12 px-4 sm:px-6 lg:px-8">
+    <!-- Contenedor de la carátula -->
+    <div class="max-w-3xl mx-auto">
+        <div class="bg-white dark:bg-slate-800 shadow-2xl rounded-lg overflow-hidden">
             
-            <div class="space-y-4">
-                <div>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm">Nombre</p>
-                    <p class="text-xl font-semibold text-gray-900 dark:text-white">{{ $user->name }}</p>
+            <!-- Encabezado con línea decorativa -->
+            <div class="border-b-4 border-blue-600 px-12 py-16 text-center bg-gradient-to-b from-slate-50 to-white dark:from-slate-700 dark:to-slate-800">
+                
+                <!-- Logo/Escudo simulado -->
+                <div class="mb-6 flex justify-center">
+                    <div class="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center text-white text-3xl font-bold shadow-lg">
+                        🎓
+                    </div>
                 </div>
 
-                <div>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm">Correo Electrónico</p>
-                    <p class="text-xl font-semibold text-gray-900 dark:text-white">{{ $user->email }}</p>
-                </div>
+                <!-- Nombre de la universidad -->
+                <h1 class="text-2xl font-bold text-blue-900 dark:text-blue-300 mb-1">
+                    UNIVERSIDAD MARIANO GALVEZ DE GUATEMALA
+                </h1>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mb-8 font-semibold tracking-wider">
+                    Excelencia Académica
+                </p>
 
-                <div>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm">Miembro Desde</p>
-                    <p class="text-xl font-semibold text-gray-900 dark:text-white">
-                        {{ $user->created_at->format('d \\d\\e F \\d\\e Y') }}
-                    </p>
-                </div>
-
-                <div>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm">Última Actualización</p>
-                    <p class="text-xl font-semibold text-gray-900 dark:text-white">
-                        {{ $user->updated_at->format('d \\d\\e F \\d\\e Y h:i A') }}
-                    </p>
+                <!-- Línea decorativa -->
+                <div class="flex justify-center gap-2 mb-8">
+                    <div class="h-1 w-12 bg-blue-600 rounded-full"></div>
+                    <div class="h-1 w-12 bg-blue-400 rounded-full"></div>
+                    <div class="h-1 w-12 bg-blue-600 rounded-full"></div>
                 </div>
             </div>
 
-            <form method="POST" action="{{ route('logout') }}" class="mt-6">
-                @csrf
-                <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-2 rounded-lg transition">
-                    Cerrar Sesión
-                </button>
-            </form>
+            <!-- Contenido principal de la carátula -->
+            <div class="px-12 py-16 space-y-12">
+                
+                <!-- Información académica -->
+                <div class="space-y-8">
+                    
+                    <!-- Curso -->
+                    <div class="text-center pb-6 border-b border-gray-200 dark:border-gray-700">
+                        <p class="text-sm text-gray-600 dark:text-gray-400 font-semibold uppercase tracking-wider mb-2">
+                            Curso:
+                        </p>
+                        <p class="text-2xl font-bold text-gray-900 dark:text-white">
+                            SISTEMAS OPERATIVOS II
+                        </p>
+                    </div>
+
+                    <!-- Catedrático -->
+                    <div class="text-center pb-6 border-b border-gray-200 dark:border-gray-700">
+                        <p class="text-sm text-gray-600 dark:text-gray-400 font-semibold uppercase tracking-wider mb-2">
+                            Catedrático:
+                        </p>
+                        <p class="text-xl font-semibold text-gray-900 dark:text-white">
+                            Erick Alvarez
+                        </p>
+                    </div>
+
+                    <!-- Tarea -->
+                    <div class="text-center pb-6 border-b border-gray-200 dark:border-gray-700">
+                        <p class="text-sm text-gray-600 dark:text-gray-400 font-semibold uppercase tracking-wider mb-2">
+                            Tarea:
+                        </p>
+                        <p class="text-2xl font-bold text-blue-600 dark:text-blue-400">
+                            CLASES DE SERVIDORES
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Espacio separador -->
+                <div class="h-8"></div>
+
+                <!-- Información del estudiante -->
+                <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-8 space-y-6 border-l-4 border-blue-600">
+                    
+                    <!-- Alumno -->
+                    <div>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 font-semibold uppercase tracking-wider mb-2">
+                            Alumno:
+                        </p>
+                        <p class="text-lg font-bold text-gray-900 dark:text-white">
+                            CARLOS HUMBERTO MARTINEZ DE LEON
+                        </p>
+                    </div>
+
+                    <!-- Carnet -->
+                    <div>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 font-semibold uppercase tracking-wider mb-2">
+                            Carnet:
+                        </p>
+                        <p class="text-lg font-mono font-bold text-blue-600 dark:text-blue-400">
+                            0909-14-11100
+                        </p>
+                    </div>
+
+                    <!-- Fecha -->
+                    <div>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 font-semibold uppercase tracking-wider mb-2">
+                            Fecha de Entrega:
+                        </p>
+                        <p class="text-lg font-semibold text-gray-900 dark:text-white">
+                            {{ now()->format('d \\d\\e F \\d\\e Y') }}
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Pie de página con enlace -->
+            <div class="bg-gradient-to-r from-blue-600 to-blue-700 dark:from-blue-900 dark:to-blue-800 px-12 py-6 text-center">
+                <p class="text-white text-sm font-semibold mb-3">
+                    Información sobre Servidores Web
+                </p>
+                <div class="flex gap-4 justify-center">
+                    <a href="{{ route('home') }}" class="bg-white text-blue-600 hover:bg-gray-100 px-6 py-2 rounded-lg font-semibold transition duration-200">
+                        📚 Ver Contenido
+                    </a>
+                    <form method="POST" action="{{ route('logout') }}" class="inline">
+                        @csrf
+                        <button type="submit" class="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-lg font-semibold transition duration-200">
+                            Cerrar Sesión
+                        </button>
+                    </form>
+                </div>
+            </div>
+
         </div>
 
-        <!-- Tarjeta de estadísticas -->
-        <div class="bg-white dark:bg-slate-800 rounded-lg shadow-md p-6">
-            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Estadísticas</h2>
-            
-            <div class="space-y-4">
-                <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded">
-                    <p class="text-gray-600 dark:text-gray-400 text-sm">Servidores Explorados</p>
-                    <p class="text-3xl font-bold text-blue-600 dark:text-blue-400">8</p>
-                </div>
-
-                <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded">
-                    <p class="text-gray-600 dark:text-gray-400 text-sm">Tiempo de Acceso</p>
-                    <p class="text-3xl font-bold text-green-600 dark:text-green-400">Ilimitado</p>
-                </div>
-
-                <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded">
-                    <p class="text-gray-600 dark:text-gray-400 text-sm">Tu Estado</p>
-                    <p class="text-3xl font-bold text-purple-600 dark:text-purple-400">Activo ✓</p>
-                </div>
-            </div>
+        <!-- Nota informativa -->
+        <div class="mt-8 text-center text-gray-600 dark:text-gray-400 text-sm">
+            <p>Este proyecto académico contiene información detallada sobre clasificación,</p>
+            <p>características y aplicaciones de diferentes tipos de servidores.</p>
         </div>
-    </div>
 
-    <!-- Detalles de actividad -->
-    <div class="bg-white dark:bg-slate-800 rounded-lg shadow-md p-6 mb-8">
-        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">🎯 Próximos Pasos Recomendados</h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="border-l-4 border-blue-500 p-4 bg-blue-50 dark:bg-blue-900/20 rounded">
-                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">📚 Explorar Servidores</h3>
-                <p class="text-gray-600 dark:text-gray-400 text-sm mb-3">
-                    Descubre los 8 servidores principales con información detallada.
-                </p>
-                <a href="{{ route('home') }}" class="text-blue-600 hover:text-blue-800 text-sm font-semibold">
-                    Ir al inicio →
-                </a>
-            </div>
-
-            <div class="border-l-4 border-green-500 p-4 bg-green-50 dark:bg-green-900/20 rounded">
-                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">💾 Aprender sobre Memoria</h3>
-                <p class="text-gray-600 dark:text-gray-400 text-sm mb-3">
-                    Conoce cómo cada servidor administra la memoria del sistema.
-                </p>
-                <a href="{{ route('home') }}" class="text-green-600 hover:text-green-800 text-sm font-semibold">
-                    Ver detalles →
-                </a>
-            </div>
-
-            <div class="border-l-4 border-purple-500 p-4 bg-purple-50 dark:bg-purple-900/20 rounded">
-                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">🚀 Casos de Uso</h3>
-                <p class="text-gray-600 dark:text-gray-400 text-sm mb-3">
-                    Descubre cuándo usar cada tipo de servidor.
-                </p>
-                <a href="{{ route('home') }}" class="text-purple-600 hover:text-purple-800 text-sm font-semibold">
-                    Explorar →
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Información adicional -->
-    <div class="bg-gradient-to-r from-green-50 to-blue-50 dark:from-slate-700 dark:to-slate-600 rounded-lg p-6 border border-green-200 dark:border-slate-600">
-        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">✨ ¿Qué puedes hacer ahora?</h3>
-        <ul class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
-            <li>Navegar a través de los 8 servidores investigados</li>
-            <li>Ver detalles sobre administración de memoria</li>
-            <li>Explorar características, ventajas y desventajas</li>
-            <li>Conocer los casos de uso para cada servidor</li>
-            <li>Ver videos informativos de cada servidor</li>
-        </ul>
     </div>
 </div>
 @endsection
