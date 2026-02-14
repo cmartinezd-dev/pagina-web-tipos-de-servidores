@@ -11,7 +11,9 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        //
+        // Confiar en proxies (p. ej. Railway / load balancers) para respetar
+        // cabeceras X-Forwarded y detectar HTTPS correctamente.
+        $middleware->trustProxies('*', \Illuminate\Http\Request::HEADER_X_FORWARDED_ALL);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //
