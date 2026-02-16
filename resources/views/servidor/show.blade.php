@@ -94,7 +94,7 @@
         <!-- Sidebar -->
         <div class="lg:col-span-1">
             <!-- Administración de Memoria -->
-            <section class="bg-white dark:bg-slate-800 rounded-lg shadow-md p-6 mb-8 sticky top-20">
+            <section class="bg-white dark:bg-slate-800 rounded-lg shadow-md p-6 mb-8">
                 <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">💾 Administración de Memoria</h2>
                 <div class="space-y-3">
                     @foreach($servidor['memoria'] as $memoria)

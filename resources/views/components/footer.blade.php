@@ -1,4 +1,4 @@
-<footer class="bg-slate-900 text-white mt-12 py-8">
+<footer class="bg-slate-800 text-slate-100 mt-4 py-8">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <!-- Sobre nosotros -->

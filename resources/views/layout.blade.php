@@ -31,8 +31,8 @@
             overflow: hidden;
         }
     </style>
-</head>
-<body class="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
+    </head>
+    <body class="bg-slate-50 dark:bg-slate-900">
     @include('components.navbar')
     
     <main>

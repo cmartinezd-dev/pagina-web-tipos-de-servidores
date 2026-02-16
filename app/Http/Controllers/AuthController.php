@@ -51,21 +51,29 @@ class AuthController extends Controller
     public function register(Request $request)
     {
         $validated = $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|email|unique:users',
-            'password' => 'required|min:6|confirmed'
+            'first_name' => 'required|string|regex:/^[a-záéíóúñ\s]+$/i|max:100',
+            'last_name' => 'required|string|regex:/^[a-záéíóúñ\s]+$/i|max:100',
+            'email' => 'required|email|regex:/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/|unique:users',
+            'password' => 'required|min:6|regex:/^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*]).{6,}$/|confirmed'
         ], [
-            'name.required' => 'El nombre es obligatorio',
+            'first_name.required' => 'El nombre es obligatorio',
+            'first_name.regex' => 'El nombre solo puede contener letras y espacios',
+            'first_name.max' => 'El nombre no puede exceder 100 caracteres',
+            'last_name.required' => 'El apellido es obligatorio',
+            'last_name.regex' => 'El apellido solo puede contener letras y espacios',
+            'last_name.max' => 'El apellido no puede exceder 100 caracteres',
             'email.required' => 'El correo es obligatorio',
-            'email.unique' => 'Este correo ya está registrado',
             'email.email' => 'Ingrese un correo válido',
+            'email.regex' => 'El formato del correo no es válido. Ejemplo: carlos@gmail.com',
+            'email.unique' => 'Este correo ya está registrado',
             'password.required' => 'La contraseña es obligatoria',
             'password.min' => 'La contraseña debe tener al menos 6 caracteres',
+            'password.regex' => 'La contraseña debe contener al menos una mayúscula, un número y un símbolo (!@#$%^&*)',
             'password.confirmed' => 'Las contraseñas no coinciden'
         ]);
 
         $user = User::create([
-            'name' => $validated['name'],
+            'name' => trim($validated['first_name'] . ' ' . $validated['last_name']),
             'email' => $validated['email'],
             'password' => Hash::make($validated['password']),
         ]);
